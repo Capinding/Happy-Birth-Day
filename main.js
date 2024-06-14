@@ -55,7 +55,7 @@ myBtn.addEventListener("click", () => {
     myMessage1.innerHTML = "HAPPY BIRTH DAY! "+ name_target.toUpperCase();
 
     myMessage1.animate([
-        {transform: 'translateY(-30px)'}
+        {transform: 'translateY(-40px)'}
     ], {
         delay: 11000, iterations: 1, duration: 1200, fill: "forwards", timing: "ease-in-out"
     })
