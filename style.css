@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+    background-color: rgb(26, 26, 27);
+}
+
+.main-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* BOX 1 */
+
+.box1 {
+    position: absolute;
+    height: 70px;
+    width: 80px;
+    background-color: tomato;
+    z-index: 1;
+    border: 0.8px solid black;
+    border-radius:5px;
+    left: -165px;
+    top: -45px;
+}
+
+.box1::before {
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 20px;
+    left: 33px;
+    background-color: cyan;
+}
+
+.box1::after {
+    left: 0;
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 8px;
+    box-shadow: inset 0 10px rgb(0,0,0,0.3);
+}
+
+.click1 {
+    height: 25px;
+    width: 100px;
+    position: absolute;
+    background-color: tomato;
+    left: -30px;
+    top: -25px;
+    z-index: 2;
+    transition-duration: 2s;
+    border-radius:5px;
+    border: 0.8px solid black;
+    transform: rotateZ(-25deg);
+}
+
+.click1::before {
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 20px;
+    background-color: cyan;
+    left: 42.5px;
+}
+
+.click1::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid cyan;
+    border-top: 20px solid cyan;
+    border-left: 0 solid transparent;
+    border-right: 20px solid transparent;
+    transform: rotateZ(-90deg);
+    top: -30px;
+    left: 43px;
+}
+
+.shadow1 {
+    content: "";
+    left: -195px;
+    top: 13px;
+    position: absolute;
+    width: 120px;
+    height: 25px;
+    background-color: rgb(0,0,0,0.4);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* BOX 2 */
+
+.box2 {
+    position: absolute;
+    height: 130px;
+    width: 150px;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    border: 0.8px solid black;
+    border-radius:5px;
+    animation: bounce 3s ease infinite forwards;
+}
+
+.box2::before {
+    content: "";
+    position: absolute;
+    height: 130px;
+    width: 30px;
+    left: 63px;
+    background-color: #ff4a4a;
+}
+
+.box2::after {
+    left: 0;
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 10px;
+    box-shadow: inset 0 10px rgb(0,0,0,0.3);
+}
+
+.click2 {
+    height: 45px;
+    width: 180px;
+    position: absolute;
+    background-color: white;
+    left: -15px;
+    top: -45px;
+    z-index: 2;
+    transition-duration: 2s;
+    border-radius:5px;
+    border: 0.8px solid black;
+}
+
+.click2::before {
+    content: "";
+    position: absolute;
+    height: 45px;
+    width: 30px;
+    background-color: #ff4a4a;
+    left: 77.4px;
+}
+
+.click2::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid #ff4a4a;
+    border-top: 30px solid #ff4a4a;
+    border-left: 0 solid transparent;
+    border-right: 30px solid transparent;
+    transform: rotateZ(-90deg);
+    top: -45px;
+    left: 78px;
+}
+
+.shadow2 {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 35px;
+    top: 50px;
+    background-color: rgb(0,0,0,0.4);
+    border-radius: 50%;
+    z-index: -1;    
+    animation: shadow-shrink 3s ease infinite forwards;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-20px); 
+    }
+}
+
+@keyframes shadow-shrink {
+    0% {
+        transform: scale(0.5, 0.5);
+    }
+    50% {
+        transform: scale(1, 1);
+    }
+    100% {
+        transform: scale(0.5, 0.5);
+    }
+}
+
+#myBtn {
+    position: absolute;
+    top: 130px;
+    height: 30px;
+    width: 90px;
+    border: 1.5px solid rgb(78, 38, 190);
+    border-radius: 10px;
+    background-color: white;
+    transition: .2s ease-in-out;
+    font-family: cursive;
+}
+
+#myBtn:hover {
+    background-color: rgb(78, 38, 190);
+    border: 1.5px solid black;
+    color: white;
+}
+
+#my-message1 , #my-message2, #my-message3, #my-message4, #my-message5, #my-message6, #my-message7{
+    top: -50px;
+    left: -60px;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    height: 40px;
+    width: 110px;
+    color: white;
+}
+
+.balloons {
+    position: absolute;
+}
+
+.balloon1 {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    position: absolute;
+    width: 85px;
+    height: 95px;
+    border-radius: 50%;
+    background-color: rgba(247, 92, 234, 0.986);
+    left: 120px;
+    top: -240px;
+}
+
+.balloon1::before {
+    height: 200px;
+    width: 1px;
+    content: "";
+    position: absolute;
+    background-color: rgba(247, 92, 234, 0.986);
+    left: 41px;
+    top: 103px;
+}
+
+.balloon1::after {
+    content: "";
+    position: absolute;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    left: 35px;
+    top: 94.5px;
+}
+
+.balloon1::after {
+    border-bottom: 10px solid rgba(247, 92, 234, 0.986);
+}
+
+.balloon2 {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    position: absolute;
+    width: 85px;
+    height: 95px;
+    border-radius: 50%;
+    background-color: rgba(255, 196, 0, 0.986);
+    left: 50px;
+    top: -40px;
+    z-index: 3;
+}
+
+.balloon2::before {
+    height: 200px;
+    width: 1px;
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 196, 0, 0.986);
+    left: 41px;
+    top: 103px;
+}
+
+.balloon2::after {
+    content: "";
+    position: absolute;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    left: 35px;
+    top: 94.5px;
+}
+
+.balloon2::after {
+    border-bottom: 10px solid rgba(255, 196, 0, 0.986);
+}
+
+.balloon3 {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    position: absolute;
+    width: 85px;
+    height: 95px;
+    border-radius: 50%;
+    background-color: rgba(75, 201, 233, 0.986);
+    left: 100px;
+    top: -15px;
+}
+.balloon3::before {
+    height: 200px;
+    width: 1px;
+    content: "";
+    position: absolute;
+    background-color: rgba(75, 201, 233, 0.986);
+    left: 41px;
+    top: 103px;
+}
+
+.balloon3::after {
+    content: "";
+    position: absolute;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    left: 35px;
+    top: 94.5px;
+}
+
+.balloon3::after {
+    border-bottom: 10px solid rgba(75, 201, 233, 0.986);
+}
+
