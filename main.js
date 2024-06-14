@@ -70,7 +70,7 @@ myBtn.addEventListener("click", () => {
     myMessage2.innerHTML = "Wishing you an amazing day, full of happiness!";
 
     myMessage2.animate([
-        {transform: 'translateY(-30px)'}
+        {transform: 'translateY(-20px)'}
     ], {
         delay: 21000, iterations: 1, duration: 1200, fill: "forwards", timing: "ease-in-out"
     })
@@ -86,7 +86,7 @@ myBtn.addEventListener("click", () => {
 
 
     myMessage3.animate([
-        {transform: 'translateY(-30px)'}
+        {transform: 'translateY(-20px)'}
     ], {
         delay: 30000, iterations: 1, duration: 1200, fill: "forwards", timing: "ease-in-out"
     })
@@ -102,7 +102,7 @@ myBtn.addEventListener("click", () => {
     myMessage4.innerHTML = "Make this year count and memorable!";
 
     myMessage4.animate([
-        {transform: 'translateY(-30px)'}
+        {transform: 'translateY(-20px)'}
     ], {
         delay: 39000, iterations: 1, duration: 1200, fill: "forwards", timing: "ease-in-out"
     })
@@ -117,7 +117,7 @@ myBtn.addEventListener("click", () => {
     myMessage5.innerHTML = "I hope you'll find your dilaw, Happy Birth Day!";
 
     myMessage5.animate([
-        {transform: 'translateY(-30px)'}
+        {transform: 'translateY(-20px)'}
     ], {
         delay: 48000, iterations: 1, duration: 1200, fill: "forwards", timing: "ease-in-out"
     })
@@ -132,7 +132,7 @@ myBtn.addEventListener("click", () => {
     myMessage6.innerHTML = "Thank you for everything! <br>" + name_target.toUpperCase();
 
     myMessage6.animate([
-        {transform: 'translateY(-30px)'}
+        {transform: 'translateY(-20px)'}
     ], {
         delay: 57000, iterations: 1, duration: 1200, fill: "forwards", timing: "ease-in-out"
     })
@@ -147,7 +147,7 @@ myBtn.addEventListener("click", () => {
     myMessage7.innerHTML = "HEP HEP?!";
 
     myMessage7.animate([
-        {transform: 'translateY(-30px)'}
+        {transform: 'translateY(-20px)'}
     ], {
         delay: 66000, iterations: 1, duration: 1200, fill: "forwards", timing: "ease-in-out"
     })
